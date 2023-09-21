@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt = $pdo->prepare("INSERT INTO tasks (task) VALUES (?)");
         $stmt->execute([$task]);
     }
-    // test
+
     if (isset($_POST['delete_id'])) {
         $delete_id = $_POST['delete_id'];
         $stmt = $pdo->prepare("DELETE FROM tasks WHERE id = ?");
